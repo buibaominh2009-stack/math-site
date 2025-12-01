@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> — 12 Pages in One File</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#60a5fa;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#04132b 0%, #081b2f 100%); color:#e6eef8; min-height:100vh}
+    header{padding:28px 24px; display:flex; align-items:center; gap:16px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:#04263b;font-weight:700;font-size:20px}
+    .title{font-size:20px}
+    main{padding:20px;max-width:1100px;margin:0 auto}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    a.link{display:block;color:var(--accent);text-decoration:none;margin:8px 0}
+    a.link:hover{text-decoration:underline}
+    .breadcrumbs{font-size:13px;color:var(--muted);margin-bottom:12px}
+    footer{padding:20px;text-align:center;color:var(--muted)}
+    .hidden{display:none}
+    .sublist{margin-left:6px}
+    pre{background:var(--glass);padding:12px;border-radius:8px;overflow:auto}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.03);text-decoration:none;color:var(--accent)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">M²</div>
+    <div>
+      <div class="title">Mini Math Network</div>
+      <div style="font-size:13px;color:var(--muted)"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home page -->
+    <section id="home" class="page">
+      <div class="card">
+        <h2>Chủ đề chính</h2>
+        <p class="breadcrumbs">Home</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Algebra</h3>
+            <p>Khái niệm cơ bản, ví dụ & bài tập</p>
+            <a class="link" href="#algebra">Mở Algebra</a>
+          </div>
+          <div class="card">
+            <h3>Geometry</h3>
+            <p>Hình học phẳng và không gian</p>
+            <a class="link" href="#geometry">Mở Geometry</a>
+          </div>
+          <div class="card">
+            <h3>Calculus</h3>
+            <p>Giới hạn, đạo hàm, tích phân</p>
+            <a class="link" href="#calculus">Mở Calculus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Algebra parent page -->
+    <section id="algebra" class="page hidden">
+      <div class="card">
+        <h2>Algebra — Trang chính</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › Algebra</p>
+        <p>Algebra là nền tảng của nhiều phần toán học. Dưới đây là 3 trang phụ về Algebra.</p>
+        <ul class="sublist">
+          <li><a class="link" href="#algebra/introduction">Giới thiệu & định nghĩa</a></li>
+          <li><a class="link" href="#algebra/examples">Ví dụ có lời giải</a></li>
+          <li><a class="link" href="#algebra/exercises">Bài tập luyện tập</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="algebra/introduction" class="page hidden">
+      <div class="card">
+        <h2>Algebra — Giới thiệu & định nghĩa</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › <a class="btn" href="#algebra">Algebra</a> › Giới thiệu</p>
+        <p>Biến, biểu thức, phương trình, hệ phương trình. Ví dụ cơ bản:</p>
+        <pre>x^2 - 5x + 6 = 0 
+→ (x-2)(x-3)=0 
+→ x = 2 hoặc x = 3</pre>
+      </div>
+    </section>
+
+    <section id="algebra/examples" class="page hidden">
+      <div class="card">
+        <h2>Algebra — Ví dụ có lời giải</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › <a class="btn" href="#algebra">Algebra</a> › Ví dụ</p>
+        <p>Ví dụ: Giải hệ
+          <br><pre>\{ 2x + 3y = 12
+\{  x -  y = 1</pre>
+        Lời giải nhanh: từ x-y=1 -> x = y+1; thay vào 2(y+1)+3y=12 -> 5y+2=12 -> y=2 -> x=3.</p>
+      </div>
+    </section>
+
+    <section id="algebra/exercises" class="page hidden">
+      <div class="card">
+        <h2>Algebra — Bài tập</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › <a class="btn" href="#algebra">Algebra</a> › Bài tập</p>
+        <ol>
+          <li>Giải phương trình: x^2 - 7x + 10 = 0</li>
+          <li>Rút gọn biểu thức: (x^2-1)/(x-1)</li>
+          <li>Cho hệ: {x+y=5, 2x-y=4} — tìm x,y</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Geometry parent + children -->
+    <section id="geometry" class="page hidden">
+      <div class="card">
+        <h2>Geometry — Trang chính</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › Geometry</p>
+        <p>Hình học là học về hình dạng, kích thước và các tính chất của không gian.</p>
+        <ul class="sublist">
+          <li><a class="link" href="#geometry/basics">Cơ bản (định nghĩa, thuật ngữ)</a></li>
+          <li><a class="link" href="#geometry/problems">Bài toán mẫu</a></li>
+          <li><a class="link" href="#geometry/tricks">Mẹo & công thức</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="geometry/basics" class="page hidden">
+      <div class="card">
+        <h2>Geometry — Cơ bản</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › <a class="btn" href="#geometry">Geometry</a> › Cơ bản</p>
+        <p>Ví dụ: Diện tích tam giác = 1/2 * base * height</p>
+      </div>
+    </section>
+
+    <section id="geometry/problems" class="page hidden">
+      <div class="card">
+        <h2>Geometry — Bài toán mẫu</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › <a class="btn" href="#geometry">Geometry</a> › Bài toán</p>
+        <p>Cho tam giác vuông có hai cạnh kề là 3 và 4. Tính cạnh huyền: 5 (theo định lý Pythagoras).</p>
+      </div>
+    </section>
+
+    <section id="geometry/tricks" class="page hidden">
+      <div class="card">
+        <h2>Geometry — Mẹo & công thức</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › <a class="btn" href="#geometry">Geometry</a> › Mẹo</p>
+        <ul>
+          <li>Định lý Pythagoras: a^2 + b^2 = c^2</li>
+          <li>Công thức diện tích tam giác khi biết 3 cạnh (Heron)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Calculus parent + children -->
+    <section id="calculus" class="page hidden">
+      <div class="card">
+        <h2>Calculus — Trang chính</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › Calculus</p>
+        <p>Giới hạn, đạo hàm, tích phân là chủ đề chính. Dưới đây là 3 trang phụ.</p>
+        <ul class="sublist">
+          <li><a class="link" href="#calculus/limits">Giới hạn</a></li>
+          <li><a class="link" href="#calculus/derivatives">Đạo hàm</a></li>
+          <li><a class="link" href="#calculus/integrals">Tích phân</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="calculus/limits" class="page hidden">
+      <div class="card">
+        <h2>Calculus — Giới hạn</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › <a class="btn" href="#calculus">Calculus</a> › Giới hạn</p>
+        <p>Ví dụ: lim_{x→0} (sin x)/x = 1</p>
+      </div>
+    </section>
+
+    <section id="calculus/derivatives" class="page hidden">
+      <div class="card">
+        <h2>Calculus — Đạo hàm</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › <a class="btn" href="#calculus">Calculus</a> › Đạo hàm</p>
+        <p>Ví dụ: (d/dx) x^n = n x^{n-1}</p>
+      </div>
+    </section>
+
+    <section id="calculus/integrals" class="page hidden">
+      <div class="card">
+        <h2>Calculus — Tích phân</h2>
+        <p class="breadcrumbs"><a class="btn" href="#">Home</a> › <a class="btn" href="#calculus">Calculus</a> › Tích phân</p>
+        <p>Ví dụ: ∫ x^n dx = x^{n+1}/(n+1) + C (n ≠ -1)</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    </footer>
+
+  <script>
+    // Simple hash-based router
+    const pages = document.querySelectorAll('.page');
+    function showPage(hash){
+      let target = hash || '#home';
+      // Normalize: remove trailing slashes
+      if(!target.startsWith('#')) target = '#' + target;
+      // find section with id exactly equal to target (without #)
+      const id = target.slice(1);
+      pages.forEach(p => p.classList.add('hidden'));
+      const el = document.getElementById(id);
+      if(el) el.classList.remove('hidden');
+      else document.getElementById('home').classList.remove('hidden');
+      // scroll to top for smoother UX
+      window.scrollTo(0,0);
+    }
+
+    window.addEventListener('hashchange', ()=> showPage(location.hash));
+    // initial
+    showPage(location.hash);
+
+    // enhance internal .btn links to set hash without reloading
+    document.body.addEventListener('click', e => {
+      if(e.target.matches('a.btn')){
+        const href = e.target.getAttribute('href') || '#';
+        if(href.startsWith('#')){
+          e.preventDefault();
+          location.hash = href;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
